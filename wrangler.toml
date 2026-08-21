@@ -1,0 +1,15 @@
+name = "fpms"
+compatibility_date = "2026-01-01"
+pages_build_output_dir = "dist"
+
+# Replace database_id with the value printed by:
+#   wrangler d1 create fpms
+# then apply the schema:
+#   wrangler d1 execute fpms --file=migrations/0001_init.sql --remote
+#
+# The binding must also be added in the Pages dashboard under
+# Settings -> Functions -> D1 database bindings, with variable name DB.
+[[d1_databases]]
+binding = "DB"
+database_name = "fpms"
+database_id = "REPLACE_WITH_YOUR_DATABASE_ID"
