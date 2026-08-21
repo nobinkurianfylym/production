@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Match the app shell so there is no white flash before React mounts. */
+html, body, #root { height: 100%; background: #0E1420; }
+body { margin: 0; -webkit-font-smoothing: antialiased; }
+
+/* The stripboard scrolls horizontally; keep the scrollbar dark. */
+* { scrollbar-color: #2A3750 #0E1420; scrollbar-width: thin; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0E1420; }
+::-webkit-scrollbar-thumb { background: #2A3750; border-radius: 5px; }
+
+@media print {
+  nav, header { display: none !important; }
+  body, #root { background: #fff; }
+}
